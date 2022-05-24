@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="row">
+        <img class="logo" src="./mini-logo.svg" />
+        <div class="row">
+            <button class="b-s l p">Home</button>
+            <button class="b-s l p">Contact</button>
+            <button class="b-s l p">Notre solution</button>
+            <button class="b-s l p">Mon compte</button>
+        </div>
+    </nav>
+    <div id="content" class="col">
+        <div id="create_image" class="col">
+            <div class="steps row">
+            </div>
+            <div class="content_step">
+                <div id="step1" class="col hidden visible">
+                    <h3 class="l">Avant de commencer</h3>
+                    <h4 class="s">Texte pour expliquer les besoins et la procédure.</h4>
+                    <div class="button b-l h4 xl or-in next">Je comprends</div>
+                </div>
+                <div id="step2" class="col hidden">
+                    <h4 class="l">Commencer par uploder une photo de votre souvenir</h4>
+                    <input id="image" name="image" type="file" onchange="previewPicture(this)"></input>
+                    <label for="image" id="button-preview" class="button b-l h4 xl or-in">Upload photo (.png / .jpg /
+                        .jpeg)</label>
+                    <label for="image" id="img-preview" class="button tr-in-1 hidden"><img src="#" alt="" />
+                        <div class="button hover-image">
+                            <h6 class="l">Selectionner une autre photo...</h6>
+                        </div>
+                    </label>
+                    <div class="tr-in row input-text-wrapper">
+                        <p class="m">Entrer le nom de votre souvenir :</p><input type="text" id="image_name" class="l p"
+                            name="image_name">
+                    </div>
+                    <div class="button b-s xl black-b next hidden">Valider</div>
+                </div>
+                <div id="step3" class="col hidden">
+                    <h4 class="l">Veuillez patienter, nous donnons vie à votre image...</h4>
+                    <div class="loader circle red-in l">LOADER
+                        ANIME</div>
+                    <div class="view3D red-in l hidden">Image en visuel seuils preview</div>
+                    <div class="button b-s xl black-b next hidden">Valider</div>
+                </div>
+                <div id="step4" class="col hidden">
+                    <h4 class="l">Ajouter un enregistrement audio de votre souvenir</h4>
+                    <div class="audios row">
+                        <input id="principal" name="principal" type="file" onchange="previewAudio(this)">
+                        <label for="principal" class="button b-l h4 xl or-in">Upload audio</label>
+                        <div id="record-audio" class="button b-l h4 xl or-in row"><img src="./icon_micro.svg" class="icon" />Enregistrer
+                            un audio</div>
+                        <audio controls="controls" id="audio-preview" class="hidden" src=""></audio>
+                    </div>
+                    <div class="tr-in row input-text-wrapper">
+                        <p class="l">Entrer un titre:</p><input type="text" id="audio1_name" class="m p" name="audio1_name">
+                    </div>
+                    <div class="button b-s xl black-b next hidden">Valider</div>
+                </div>
+                <div id="step5" class="col hidden">
+                    <h4 class="l">Ajouter des sons d’ambiance</h4>
+                    <p class="m">Afin d’améliorer l’experience immersive, Mira vous offre la possibilité d’ajouter des
+                        son
+                        supplémentaire. Vous pouvez ajouter jusqu’à 4 son par souvenir.</p>
+                    <div class="button b-l h4 xl or-in next hidden">OK!</div>
+                    <p class="m button b-s next-passed">Passer cette étape</p>
+                </div>
+                <div id="step6" class="col hidden">
+                    <h4 class="l">Ajouter des sons d’ambiance</h4>
+                    <p class="m">Sélectioner la partie de la planche de vous souhaiter Configurer</p>
+                    <div id="select-zone" class="row">
+                        <div id="left" class="zone">
+                            <div id="leftList" class="list-audio"></div>
+                        </div>
+                        <div class="col">
+                            <div id="top" class="zone">
+                                <div id="topList" class="list-audio"></div>
+                            </div>
+                            <div id="bottom" class="zone">
+                                <div id="bottomList" class="list-audio"></div>
+                            </div>
+                        </div>
+                        <div id="right" class="zone">
+                            <div id="rightList" class="list-audio"></div>
+                        </div>
+                    </div>
+                    <div class="button b-s xl black-b next">Valider</div>
+                    <div class="pop-up-wrapper hidden">
+                        <div class="pop-up col">
+                            <h4 class="b-s m">TOP</h4>
+                            <div class="row">
+                                <div>
+                                    <div id="ambientSoundList" class="list-audio"></div>
+                                </div>
+                                <div class="button xl"><img src="./upload-icon.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="step7" class="col hidden">
+                    <h4 class="l">Récapitulatif de vos choix</h4>
+                    <div class="button b-s xl black-b next">Valider</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="row">
+        <div id="help" class="b-s row">
+            <p class="xl">?</p>
+            <p class="xl">Besoin d'aide</p>
+        </div>
+        <div class="col">
+            <h6 class="xl">Mira</h6>
+            <p class="m">Mentions légales</p>
+            <p class="m">Mentions légales</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6 class="xl">Nous contacter</h6>
+                <p class="m">Mentions légales</p>
+                <p class="m">Mentions légales</p>
+            </div>
+            <div class="col">
+                <h6 class="xl">Mentions légales</h6>
+                <p class="m">Mentions légales</p>
+                <p class="m">Mentions légales</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

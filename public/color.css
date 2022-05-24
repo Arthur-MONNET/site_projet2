@@ -1,0 +1,35 @@
+:root{
+    --orange : #FFAC5D;
+    --gray1 : #FCFDFD;
+    --gray2 : #C4C4C4;
+    --gray3 : #868686;
+    --gray4 : #404040;
+}
+
+.or-in{
+    background-color: var(--orange);
+    border: 5px solid var(--orange);
+    color : white;
+}
+.or-b{
+    border: 5px solid var(--orange);
+    color: var(--orange);
+}
+.black-b{
+    border: 3px solid black;
+    color: black;
+}
+.tr-in{
+    background-color: white;
+    box-shadow: 0px 2.64865px 9.27027px -3.97297px rgba(0, 0, 0, 0.35);
+    color: black;
+}
+.tr-in-1{
+    background-color: white;
+    filter: drop-shadow(0px 4px 11px rgba(0, 0, 0, 0.2));
+    color: black;
+}
+.tr{
+    background-color: transparent;
+    color: black;
+}

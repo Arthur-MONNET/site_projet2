@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./font.css";
+@import "./color.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--gray1);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input {
+    border: none; /* Removes the default border */
+}
+
+input:focus {
+    outline: none; /* Removes the border when the input is clicked */
+}
+/*********** FLEX CLASS ************/
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#content {
+    height: calc(100vh - 120px - 70px);
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+button,
+.button {
+    cursor: pointer;
+    width: max-content;
+}
+
+.b-l {
+    padding: 3px 80px;
+    border-radius: 18px;
+}
+.b-s {
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+
+nav button {
+    height: 30px;
+    color: var(--gray4);
+}
+nav button:nth-last-child(1) {
+    background: var(--gray4);
+    color: var(--gray1);
+}
+nav > div {
+    width: 35%;
+    min-width: max-content;
+    justify-content: space-between;
+}
+
+#create_image {
+    width: 70%;
+    height: 100%;
+    align-items: center;
+}
+
+#footer {
+    padding: 20px 40px 0;
+    height: 120px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#help {
+    margin-top: -80px;
+    position: absolute;
+    background: black;
+    right: 20px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+#help p:first-child {
+    background: white;
+    color: black;
+    position: absolute;
+    margin-left: -40px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 32px;
+    border-radius: 50%;
+    border: 3px black solid;
+}
+
+#footer > .row > .col {
+    align-items: flex-end;
+    margin-left: 60px;
+}
+#footer h6 {
+    margin-bottom: 13px;
+}
+
+.steps {
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.steps > div {
+    width: 45px;
+    cursor: pointer;
+    height: 9px;
+    background: var(--gray2);
+    border-radius: 5px;
+    margin: 0 6px;
+}
+
+.content_step {
+    height: 100%;
+    padding-bottom: 110px;
+}
+
+.content_step > div {
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.content_step > div h4 {
+    margin-bottom: 10px;
+}
+.content_step > div p {
+    color: var(--gray3);
+}
+#step1 > h4 {
+    color: #a1a1a1;
+}
+#step1 {
+    justify-content: center;
+}
+#step1 > .next {
+    margin-top: 50px;
+}
+
+.input-text-wrapper {
+    padding: 7px 15px;
+    border-radius: 9px;
+    margin: 30px 0 40px;
+}
+
+.input-text-wrapper > p {
+    margin-right: 15px;
+}
+
+.input-text-wrapper > p,
+.input-text-wrapper > .p {
+    color: var(--gray4);
+}
+#step2 > label {
+    margin-top: 70px;
+}
+
+#step4 > .audios {
+    margin-top: 120px;
+}
+
+#step4 > .audios > div.row {
+    align-items: center;
+    margin-left: 20px;
+    transition: 0.3s;
+    z-index: 1;
+    padding: 3px 30px 3px 53px;
+}
+#step4 > .audios > label {
+    padding: 3px 53px;
+    transition: 0.3s;
+}
+#step4 .icon {
+    position: absolute;
+    height: 30px;
+    margin-left: -40px;
+}
+#circle-record {
+    border-radius: 50%;
+    width: 30px;
+    background-color: red;
+}
+.circle-anim{
+    animation: ease pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: #f06c6c;
+    }
+    100% {
+        background-color: red;
+    }
+}
+#step5 .next-passed {
+    margin-bottom: 100px;
+    color: var(--gray3);
+    text-decoration: underline;
+}
+
+#step5 .next {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#select-zone {
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+#select-zone .zone {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    border-radius: 15px;
+    background-color: var(--gray3);
+    opacity: 0.3;
+    transition: 0.3s;
+}
+#select-zone .zone:hover {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+#select-zone > .col {
+    width: 250%;
+}
+
+#step6 > .next {
+    position: absolute;
+    bottom: 240px;
+    margin-left: 50%;
+}
+
+.pop-up-wrapper {
+    z-index: 100;
+    background: rgb(0 0 0 / 50%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+.pop-up {
+    background: var(--gray1);
+    width: 40%;
+    height: 35%;
+    border-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+}
+.pop-up > h4 {
+    z-index: 1;
+    background: var(--gray2);
+    color: var(--gray1);
+    width: max-content;
+    position: absolute;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.pop-up > div {
+    width: 100%;
+    height: 100%;
+}
+.pop-up > div > div {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pop-up > div > .button {
+    border-left: 2px solid var(--gray2);
+}
+#img-preview {
+    margin-top: 20px !important;
+    width: 350px;
+    height: 200px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+#img-preview img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.hover-image {
+    z-index: 1;
+    top: 0;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 172, 93, 0.8);
+    opacity: 0;
+    transition: 0.2s;
+}
+.hover-image h3 {
+    width: 80%;
+}
+.hover-image:hover {
+    opacity: 1;
+}
+.hidden-tr {
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0;
+    border: 0 !important;
+}
+audio:focus-visible {
+    outline: none;
+}
+.step-ok {
+    background-color: var(--orange) !important;
+}
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: flex;
+}

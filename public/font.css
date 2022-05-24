@@ -1,0 +1,56 @@
+
+
+*{
+    font-family: 'Inter';
+    font-style: normal;
+}
+.x3s{
+    font-weight: 100;
+}
+.x2s{
+    font-weight: 200;
+}
+.xs{
+    font-weight: 300;
+}
+.s{
+    font-weight: 400;
+}
+.m{
+    font-weight: 500;
+}
+.l{
+    font-weight: 600;
+}
+.xl{
+    font-weight: 700;
+}
+.x2l{
+    font-weight: 800;
+}
+.x3l{
+    font-weight: 900;
+}
+h3, .h3{
+    font-size: 40px;
+}
+h4, .h4{
+    font-size: 30px;
+}
+h5, .h5{
+    font-size:25px;
+}
+h6, .h6{
+    font-size:20px;
+}
+p, .p{
+    font-size: 16px;
+}
+
+#footer p{
+    font-size: 12px;
+}
+
+button{
+    all:unset;
+}
